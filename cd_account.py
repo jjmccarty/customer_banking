@@ -33,6 +33,8 @@ def create_cd_account(balance, interest_rate, months):
     return  balance, interest_earned
 
 if __name__ == "__main__":
-    print("cd_account.py") 
+    # Only runs when cd_account.py is directly executed.  
+    # Used for validation of functions outside of the main program.
+    print("Executing script cd_account.py") 
     cd_account_info =  create_cd_account(100.00, .5, 12)
     print(f"CD Account info: {cd_account_info}")

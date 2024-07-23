@@ -53,7 +53,10 @@ def main():
     print(formatting_divider * formatting_chars)
 
 def input_as_int(input_str):
-    """Convenience call to input_as_num which explicity passes the int value
+    """
+    Convenience call to input_as_num which explicity passes the int value
+    This is probably overkill for a simple verification routine, but does allow
+    for addition int specific rules at a later time.
 
     Args:
         input_str (str): The text for the user input entry prompt.
@@ -64,7 +67,10 @@ def input_as_int(input_str):
     return input_to_num(input_str, int)
 
 def input_as_float(input_str):
-    """Convenience call to input_as_num which explicity passes the float value
+    """
+    Convenience call to input_as_num which explicity passes the float value
+    This is probably overkill for a simple verification routine, but does allow
+    for additional float specific rules at a later time. 
 
     Args:
         input_str (str): The text for the user input entry prompt.
@@ -108,5 +114,4 @@ def input_to_num(input_str, cast_type):
 
 if __name__ == "__main__":
     # Call the main function.
-    print("customer_banking.py")
     main()

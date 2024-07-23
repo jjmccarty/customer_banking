@@ -39,6 +39,8 @@ def create_savings_account(balance, interest_rate, months):
     return  balance, interest_earned
 
 if __name__ == "__main__":
-    print("savings_account.py") 
+    # Only runs when savings_account.py is directly executed.  
+    # Used for validation of functions outside of the main program.
+    print("Executing script savings_account.py") 
     account_info =  create_savings_account(100.00, 2.5, 12)
     print(f"Account info: {account_info}")
