@@ -16,7 +16,7 @@ def main():
 
     savings_balance = input_as_float("Enter starting savings account balance: ")
     savings_interest = input_as_float("Enter the account interest rate: ")
-    savings_maturity = input_as_int("Enter the months to maturity: ")
+    savings_maturity = input_as_int("Enter the months of interest to calculate: ")
     
 
     # Call the create_savings_account function and pass the variables from the user.
@@ -36,7 +36,7 @@ def main():
     # ADD YOUR CODE HERE
     cd_balance = input_as_float("Enter starting CD account balance: ")
     cd_interest = input_as_float("Enter CD account interest rate: ")
-    cd_maturity = input_as_int("Enter the months to maturity: ")
+    cd_maturity = input_as_int("Enter the months of interest to calculate: ")
 
     # Call the create_cd_account function and pass the variables from the user. 
     updated_cd_balance, cd_interest_earned = create_cd_account(cd_balance, cd_interest, cd_maturity)
@@ -56,7 +56,7 @@ def input_as_int(input_str):
     """
     Convenience call to input_as_num which explicity passes the int value
     This is probably overkill for a simple verification routine, but does allow
-    for addition int specific rules at a later time.
+    for additional int specific rules at a later time.
 
     Args:
         input_str (str): The text for the user input entry prompt.

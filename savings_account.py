@@ -17,11 +17,12 @@ def create_savings_account(balance, interest_rate, months):
     """
     # Create an instance of the `Account` class and pass in the balance and interest parameters.
     #  Hint: You need to add the interest as a value, i.e, 0.
+    # Interest hasn't been calculated yet so we are passing 0 for now
     # ADD YOUR CODE HERE
     account = Account(balance, 0)
 
     # Calculate interest earned
-     #provided from homework hint
+    # provided from homework hint
     interest_earned = balance * (interest_rate/100 * months/12)
     interest_earned = round(interest_earned, 2)
 
@@ -40,7 +41,7 @@ def create_savings_account(balance, interest_rate, months):
 
 if __name__ == "__main__":
     # Only runs when savings_account.py is directly executed.  
-    # Used for validation of functions outside of the main program.
+    # Used for validation/testing of functions outside of the main program.
     print("Executing script savings_account.py") 
     account_info =  create_savings_account(100.00, 2.5, 12)
     print(f"Account info: {account_info}")
