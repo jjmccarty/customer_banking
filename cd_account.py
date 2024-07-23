@@ -13,6 +13,15 @@ def create_cd_account(balance, interest_rate, months):
         float: The updated CD account balance after adding the interest earned.
         float: The interest dollars earned.
     """
+
+    # Checking argument type in case type was not checked at invocation
+    if type(balance) != float or type(interest_rate) != float or type(months) != int: 
+        print("INVALID ARGUEMENT TYPE: ")
+        print(f"Expected create_cd_account(float, float, int)")
+        print(f"Recieved create_cd_account({type(balance)}, {type(interest_rate)}, {type(months)})")
+        print("The system will now exit")
+        exit()
+
     # Create an instance of the `Account` class and pass in the balance and interest parameters.
     #  Hint: You need to add the interest as a value, i.e, 0.
     # Interest hasn't been calculated yet so we are passing 0 for now.
@@ -42,3 +51,6 @@ if __name__ == "__main__":
     print("Executing script cd_account.py") 
     cd_account_info =  create_cd_account(100.00, .5, 12)
     print(f"CD Account info: {cd_account_info}")
+
+    #uncomment for create_savings_account parameter type check
+    #cd_account_info = create_cd_account("100.00", .5, 12)
