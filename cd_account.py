@@ -27,23 +27,13 @@ def create_cd_account(balance, interest_rate, months):
     # Interest hasn't been calculated yet so we are passing 0 for now.
     cd_account = Account(balance, 0)
 
-    # Calculate interest earned
-    # provided from homework hint
-    interest_earned = balance * (interest_rate/100 * months/12)
-    interest_earned = round(interest_earned, 2)
-
-    # Update the CD account balance by adding the interest earned
-    balance = balance + interest_earned
-    balance = round(interest_earned, 2)
-
-    # Pass the updated_balance to the set balance method using the instance of the CDAccount class.
-    cd_account.set_balance(balance)
-
-    # Pass the interest_earned to the set interest method using the instance of the CDAccount class.
-    cd_account.set_interest(interest_earned)
-
+    # Note: original instructions had the calculation for updating the balance
+    # directly in this script, however it is same logic for the savings_account
+    # and the cd_account script.  Moved to an Account method to reduce duplication
+    cd_account.update_balance_with_interest(interest_rate, months)
+    
     # Return the updated balance and interest earned.
-    return  balance, interest_earned
+    return  cd_account.balance, cd_account.interest
 
 if __name__ == "__main__":
     # Only runs when cd_account.py is directly executed.  
