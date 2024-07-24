@@ -59,6 +59,8 @@ The ```savings_account``` script provides a single function ```create_savings_ac
 2. Sets and store the values in an ```Account``` object
 3. Returns the updated account balance and interest dollars received
 
+> Note: Parts of the ```create_savings_account``` logic as defined in homework instructions was duplicative to the logic for the ```create_cd_account``` function from the ```cd_account.py``` file.  To eliminate the duplication this was refactored into a method on the ```Account``` class which is invoked from these functions.
+
 ### cd_account.py
 
 The ```cd_account``` script provides a single function ```create_cd_account``` to perform the following:  
@@ -67,5 +69,14 @@ The ```cd_account``` script provides a single function ```create_cd_account``` t
 2. Sets and store the values in an ```Account``` object
 3. Returns the updated account balance and interest dollars received
 
+> Please see note under ```savings_account.py``` for relevant refactoring details.
+
 ### Account Class (Account.py)
 The ```Account``` class provides a simple object to store account information.  This class provides a ```set``` function to store the account balance and the interest gained on the account. 
+
+The ```Account``` class also contains a new method called ```update_balance_with_interest``` refactored from the original logic specified in the homework instructions for ```create_savings_account``` and ```create_cd_account``` to reduce duplicative code.  The function will add the accrued interest to the account balance based on the interest rate and months provided. 
+
+### BankingUtils Module (BankingUtils.py)
+The BankingUtils module contains basic utility functions to validate user input as a specific data type (int or float) and return that input value cast to the correct type. 
+
+This was added to the code and imported by the ```customer_banking.py``` script to simplify the code in the main script execution.  
